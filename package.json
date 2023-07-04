@@ -1,0 +1,28 @@
+{
+  "name": "assigement",
+  "version": "1.0.0",
+  "description": "## Assignment Description:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "run":"node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roshan2057/backend-assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roshan2057/backend-assignment/issues"
+  },
+  "homepage": "https://github.com/roshan2057/backend-assignment#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
