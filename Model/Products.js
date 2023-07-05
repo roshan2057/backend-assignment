@@ -13,13 +13,6 @@ const Product = db.define("products", {
 });
 
 
-Product.sync({ force: false })
-    .then(() => {
-        console.log("Syncin Product Table")
-    })
-    .catch(error => {
-        console.log(error)
-    })
 
 
 module.exports = Product;

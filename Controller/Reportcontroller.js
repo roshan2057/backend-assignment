@@ -102,11 +102,13 @@ const topselling = async (req, res) => {
 
     // Documentaion https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#specifying-attributes-for-select-queries
     const data = await Order.findAll({
-      attributes: ['productId', [Sequelize.fn('COUNT', 'productId'), 'productCount']],
+      attributes: ['productId', [Sequelize.fn('SUM', Sequelize.col('quantity')), 'totalQuantity']],
       group: ['productId'],
-      order: [[Sequelize.literal('productCount'), 'DESC']],
-
+      order: [[Sequelize.fn('SUM', Sequelize.col('quantity')), 'DESC']],
+      limit: 10
     })
+
+
     if (data.length > 0) {
       res.json({ data: data })
     }

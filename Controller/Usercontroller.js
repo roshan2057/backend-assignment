@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken')
+const bcrypt = require('bcrypt')
 const User = require('../Model/Users')
 
 const createtoken = (id) => {
@@ -16,6 +17,9 @@ const register = async (req, res) => {
             role: 'user',
             phone: req.body.phone
         }
+
+        // if your want you hash you password you can
+        // const hash = await bcrypt.hash(value.password,10);
 
         // Form validation
         // check if the feild is empty
@@ -60,10 +64,15 @@ const login = async (req, res) => {
             return res.json({ data: "All field required" })
         }
 
+        // for hashed password compare 1st database password should retrive
+        // const ismatched = await bcrypt.compare(inputpassword,databasepassword);
 
         const check = await User.findOne({ where: { email: value.email, password: value.password } });
         if (check) {
+            // Generating the jwt webtoken
             const token = createtoken(check.id);
+            // we can store token in cookies but here i just send it to client, the are responsible to store in cookies or in session
+            // client should every time send the token in the http hearder in variable auth so the middleware can verify it
             res.status(200).json({ id: check.id, token: token })
         }
         else {
@@ -102,7 +111,7 @@ const edituser = async (req, res) => {
             role: req.body.role,
             phone: req.body.phone
         }
-      
+
 
         // Update the data
         const update = await User.update(value, {
@@ -134,7 +143,7 @@ const changepassword = async (req, res) => {
         // Get check the old password
         const user = await User.findByPk(value.user_id);
         if (user.password != value.oldpassword) {
-           return res.status(404).json({ id: "password not matched" })
+            return res.status(404).json({ id: "password not matched" })
         }
 
         // update the new password

@@ -28,7 +28,7 @@ app.use('/API/order', orderroute)
 app.use('/API/report', reportroute)
 
 app.get('/', (req, res) => {
-    res.send("server is running")
+    res.send("Server is running, Database may not work Kindly follow steps written inside the DOCS.md (https://github.com/roshan2057/backend-assignment)   Thank You!!!!!!")
 })
 
 app.get('*', (req, res) => {

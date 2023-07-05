@@ -9,13 +9,8 @@ const User = db.define("users", {
     phone: DataTypes.STRING(10),
 });
 
-User.sync({ force: false })
-    .then(() => {
-        console.log("Syncing User table")
-    })
-    .catch(error => {
-        console.log(error)
-    })
+
+
 
 
 module.exports = User;

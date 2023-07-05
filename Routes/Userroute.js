@@ -3,7 +3,7 @@ const auth = require('../Middleware/Auth');
 const { register, login, select, changepassword, edituser } = require('../Controller/Usercontroller');
 const router = express.Router();
 
-// As authentication auth middle ware is used which verify the incomming token 
+// As authentication (auth) middleware is used which verify the incomming token 
 router.post('/register', register)
 router.post('/login', login)
 router.get('/select', auth, select)

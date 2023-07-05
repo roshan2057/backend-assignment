@@ -5,19 +5,19 @@ const jwt = require('jsonwebtoken')
 const auth = (req, res, next) => {
 
     const token = req.headers.auth;
-    if(token){
-        jwt.verify(token,process.env.private_key,(error,result)=>{
-            if(error){
+    if (token) {
+        jwt.verify(token, process.env.private_key, (error, result) => {
+            if (error) {
                 return res.send("Token Invalid")
             }
-            else{
+            else {
                 const data = jwt.decode(token)
-                req.data=data;
+                req.data = data;
                 next();
             }
         })
     }
-    else{
+    else {
         return res.send("No Token")
     }
 
