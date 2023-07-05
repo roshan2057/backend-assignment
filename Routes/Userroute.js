@@ -4,10 +4,10 @@ const { register, login, select, changepassword, edituser } = require('../Contro
 const router = express.Router();
 
 
-router.get('/register',auth,register)
-router.get('/login',auth,login)
+router.post('/register',auth,register)
+router.post('/login',auth,login)
 router.get('/select',auth,select)
-router.get('/changepassword',auth,changepassword)
-router.get('/update',auth,edituser)
+router.post('/changepassword',auth,changepassword)
+router.put('/update',auth,edituser)
 
 module.exports=router;

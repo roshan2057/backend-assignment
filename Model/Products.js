@@ -1,7 +1,7 @@
 const DataTypes = require('sequelize')
 const db =require('../Model/Database')
 
-    const Product =sequelize.define("products",{
+    const Product =db.define("products",{
     product_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,

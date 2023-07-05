@@ -4,6 +4,8 @@ const app = express();
 const db =require('./Model/Database')
 const userroute = require('./Routes/Userroute')
 const productroute = require('./Routes/Productroute')
+const orderroute = require('./Routes/Orderroute')
+const reportroute = require('./Routes/Reportroute')
 
 app.use(bodyparser.json())
 require('dotenv').config()
@@ -17,6 +19,8 @@ db.authenticate().then(()=>{
 
 app.use('/API/user',userroute)
 app.use('/API/product',productroute)
+app.use('/API/order',orderroute)
+app.use('/API/report',reportroute)
 
 app.get('/',(req,res)=>{
    res.send("server running")
