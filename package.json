@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js",
-    "run":"node index.js"
+    "run": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,12 @@
   },
   "homepage": "https://github.com/roshan2057/backend-assignment#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.4.4",
+    "sequelize": "^6.32.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
