@@ -1,0 +1,461 @@
+{
+	"info": {
+		"_postman_id": "9f7716cf-42c2-4ce3-948f-826a30fd613d",
+		"name": "assigement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26741135"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/API/product/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"product2\",\n    \"description\":\"this is procuct 2\",\n    \"price\": \"200\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/API/product/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"product",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/product/update/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"edited 2\",\n    \"description\":\"this is procuct 2\",\n    \"price\": \"200\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/API/product/update/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"product",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/product/delete/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/API/product/delete/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"product",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/product/info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/API/product/info",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"product",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/order/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\":\"1\",\n    \"userId\":\"2\",\n    \"quantity\":\"10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/API/order/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"order",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/order/update/3",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\":\"1\",\n    \"userId\":\"1\",\n    \"quantity\":\"6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/API/order/update/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"order",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/order/delete/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\":\"1\",\n    \"userId\":\"1\",\n    \"quantity\":\"60\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/API/order/delete/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"order",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/order/info/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/API/order/info/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"order",
+						"info",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"test2\",\n    \"email\":\"soo@gmail\",\n    \"password\":\"1234\",\n    \"phone\":\"9874487854\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/API/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"soo@gmail\",\n    \"password\":\"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/API/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/user/select",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjg4NTY0MzU1LCJleHAiOjE2ODg4NjQzNTV9.R9U0r1B9bMq2V_kO4RVBvEBzyqv--tDUZK1TfQOJgVc",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "auth",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/API/user/select",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"user",
+						"select"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/user/update",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjg4NTY0MzU1LCJleHAiOjE2ODg4NjQzNTV9.R9U0r1B9bMq2V_kO4RVBvEBzyqv--tDUZK1TfQOJgVc",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "auth",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"hari\",\n    \"email\":\"abc@gmail.com\",\n    \"password\":\"d124\",\n    \"phone\":\"9874584587\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/API/user/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/user/changepassword",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjg4NTY0MzU1LCJleHAiOjE2ODg4NjQzNTV9.R9U0r1B9bMq2V_kO4RVBvEBzyqv--tDUZK1TfQOJgVc",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "auth",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"oldpassword\":\"111\",\n    \"newpassword\":\"222\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/API/user/changepassword",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"user",
+						"changepassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/report/today",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/API/report/today",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"report",
+						"today"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/report/weekly",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/API/report/weekly",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"report",
+						"weekly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/API/report/monthly",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/API/report/monthly",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"API",
+						"report",
+						"monthly"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
